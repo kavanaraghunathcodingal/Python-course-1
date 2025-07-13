@@ -1,5 +1,7 @@
-text = (input("Enter your charecter: "))
-if text.lower() in ["a","b","c","d","e","f",'g',"h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]:
-    print("This text is character")
+text = input("Enter your character: ")
+if text.isalpha():
+    print("This text is a letter")
+elif text.isdigit():
+    print("This text is a digit")
 else:
-    print("This text is number")
+    print("This text is a special character or symbol")
