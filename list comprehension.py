@@ -1,17 +1,12 @@
-num = []
-enter = int(input("Enter the odd number: "))
-enter1 = int(input("Enter the another odd number: "))
-enter2 = int(input("Enter the another odd number: "))
-enter3 = int(input("Enter the another odd number: "))
-num.append(enter)
-num.append(enter1)
-num.append(enter2)
-num.append(enter3)
-num2 = [9,7,5,3,11]
-odd = [i for i in num if i%2 == 0 ]
-print(odd)
+# Take inputs
+num = [int(input("Enter an odd number: ")) for _ in range(4)]
 
-fruit = ["banana","apple","mango"]
-print(fruit)
-fruit = [item.upper() for item in fruit]
-print(fruit)
+# Pick only odd numbers (corrected condition)
+odd = [i for i in num if i % 2 != 0]
+print("Odd numbers:", odd)
+
+# Fruit list in uppercase using list comprehension
+fruit = ["banana", "apple", "mango"]
+print("Original fruit list:", fruit)
+fruit_upper = [item.upper() for item in fruit]
+print("Uppercase fruit list:", fruit_upper)
