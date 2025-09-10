@@ -1,10 +1,17 @@
 import pygame
 
 pygame.init()
-scree = pygame.display.set_mode((300,300))
+import pygame
+
+pygame.init()
+screen = pygame.display.set_mode((300, 300))  # corrected name
 done = False
+
 while not done:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.quit()
+            done = True  # exit loop
+
     pygame.display.flip()
+
+pygame.quit()  # quits after loop ends
